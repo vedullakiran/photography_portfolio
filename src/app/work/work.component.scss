@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
     a {
         padding: 1.5em;
@@ -7,6 +11,13 @@ h1 {
         font-size: 1.4em;
         color: #5D5F61
      }
+}
+table {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  border-collapse:separate;
+  border-spacing:0 15px;
 }
 
 .box {
@@ -20,7 +31,7 @@ h1 {
 .face {
   position: absolute;
   width: 100%;
-  height: 100;
+  height: 100%;
   transform-origin: 0 0;
 }
 
@@ -40,19 +51,30 @@ h1 {
   font-size: 1.5rem;
   
 }
-.column {
+
+
+
+td {
     float: left;
     width: 30%;
+    height: 100%;
     padding: 10px;
   }
 
-  .column:hover .box{
+  td:hover .box{
     transform: rotateY(-90deg);
     cursor: pointer;
   }
-  
+
+  tr {
+    padding: auto;
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+
   /* Clear floats after image containers */
-  .row::after {
+  tr::after {
     content: "";
     clear: both;
     display: table;
@@ -92,7 +114,7 @@ h1 {
 }
 
 img {
-    padding: 8px;
-    height: 380px;
-    width: 100%
+    padding: inherit;
+    height: 200px;
+    max-width: 100%;
 }
